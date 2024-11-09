@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1000px;
+            background-image: url(photo-1518563077661-23ad56581d77.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .signup-container {
+            width: 500px;
+            max-width: 400px;
+            padding: 20px;
+            background: transparent;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px whitesmoke;
+            text-align: center;
+        }
+        h2{
+            margin-bottom: 20px;
+            color: white;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            margin: 10px 0 5px;
+            text-align: left;
+            color: white;
+        }
+        input[type="text"],input[type="email"],input[type="password"]{
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid whitesmoke;
+            border-radius: 5px;
+        }
+        button{
+            padding: 10px;
+            color: black;
+            background-color: palevioletred;
+            border: 1px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 200px;
+            margin-left: 80px;
+        }
+        button:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+            background-color: white;
+        }
+        p{
+           margin-top: 15px;
+           color: black;
+        }
+        a{
+           color: black;
+           text-decoration: none;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        button a{
+            color: black;
+            text-decoration: none;
+        }
+  </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" onkeyup="validateName()" required>
+            <div class="message" id="nameMessage"></div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" onkeyup="validateEmail()" required>
+            <div class="message" id="emailMessage"></div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" onkeyup="validatePassword()" required>
+            <div class="message" id="passwordMessage"></div>
+            <button type="submit"><a href="project.html">Sign Up</a></button>
+        </form>
+        <script src="./form.js"></script>
+    </div>
+</body>
+</html>

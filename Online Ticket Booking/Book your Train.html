@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book your Train</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(pngtree-summer-vacation-and-online-booking-image_15888180.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        header{
+            height: 100px;
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        header h2{
+            font-size: 30px;
+            color: white;
+            text-transform: uppercase;
+        }
+        .book-train{
+            margin: 300px auto;
+            width: 900px;
+            padding: 20px;
+            background: transparent;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px black;
+            height: 380px;
+        }
+        .book-train img{
+            width: 400px;
+            height: 300px;
+            float: right;
+            margin-top: -280px;
+        }
+        .book-train:hover{
+            transform: scale(1.2);
+            transition: 1s;
+        }
+        #input1, #input2, #input3, #select1, #select2 {
+            border: 3px solid black;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 5px;
+            width: 300px;
+            font-weight: bold;
+            margin-left: 100px;
+        }
+        button{
+            border: 3px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 150px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white;
+        }
+        #button{
+            margin-left: 180px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: black;
+            color: white;
+            transition: 1s;
+            transform: scale(1.1);
+        }
+        ::placeholder {
+            color: black;
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color:gray;
+            color: white;
+            text-align: center;
+            height: 30px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Book your Train</h2>
+    </header>
+    <section class="book-train">
+        <form action="#" method="post">
+            <div><input type="text" placeholder="Passenger Name" id="input1" required></div>
+            <div><input type="number" placeholder="Age" id="input2" required min="1"></div>
+            <div><select name="from" id="select1" required>
+                <option value="" disabled selected>From</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Pune">Pune</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Bangalore">Bangalore</option>
+            </select>
+        </div>
+        <div>
+            <select name="to" id="select2" required>
+            <option value="" disabled selected>To</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Pune">Pune</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Bangalore">Bangalore</option>
+        </select>
+        </div>
+        <div><input type="date" id="input3" required></div>
+        <div id="button"><button>submit</button></div>
+        <img src="ticket booking train.jpg" alt="Ticket Booking" height="400px" width="500px">
+    </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Ticket Booking</p>
+    </footer>
+</body>
+</html>
